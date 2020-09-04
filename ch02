@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+
+void verse1() {
+    cout << "Three blind mice" << endl;
+}
+
+void verse2() {
+    cout << "See how they run" << endl;
+}
+
+double temperature(double celcius) {
+    double farenheit = celcius * 1.8 + 32.0;
+    return farenheit;
+}
+
+double astro(double lightyear) {
+    double au = lightyear * 63240;
+    return au;
+}
+
+void clock(int hour, int minute) {
+    cout << "It is " << hour << " : " << minute << "." << endl;
+}
+
+int main() {
+
+    // 01
+    cout << "Name: Begae" << endl;
+    cout << "Address: github.com/begae" << endl;
+
+    // 02
+    double mile;
+    cout << "Enter distance in miles: ";
+    cin >> mile;
+    double kilometer = mile * 1.60934;
+    cout << mile << " miles are " << kilometer << " kilometers." << endl;
+
+    // 03
+    verse1();
+    verse1();
+    verse2();
+    verse2();
+
+    // 04
+    int year;
+    cout << "Enter your age: ";
+    cin >> year;
+    cout << "You are " << year * 12 << " months old." << endl;
+
+    // 05
+    double celcius;
+    cout << "Enter temperature in celcius: ";
+    cin >> celcius;
+    cout << celcius << " celcius is " << temperature(celcius) << " farenheit." << endl;
+
+    // 06
+    double lightyear;
+    cout << "Enter distance in lightyear: ";
+    cin >> lightyear;
+    cout << lightyear << " lightyear is " << astro(lightyear) << " AU." << endl;
+
+    // 07
+    int hour, minute;
+    cout << "Enter hour: ";
+    cin >> hour;
+    cout << "Enter minute: ";
+    cin >> minute;
+    clock(hour, minute);
+
+    return 0;
+}
