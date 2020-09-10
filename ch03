@@ -1,0 +1,71 @@
+#include <iostream>
+
+int main() {
+    using namespace std;
+
+    const int cents_to_meters = 100;
+    int height;
+    cout << "Enter your height in centimeters: ";
+    cin >> height;
+    cout << "That is " << height / cents_to_meters << " meter and ";
+    cout << height % cents_to_meters << " centimeters." << endl;
+
+    double feet, inches, meters, weight, bmi;
+    const double feet_to_inches = 12.0;
+    const double inches_to_meters = 0.0254;
+    const double pounds_to_kilos = 2.2;
+    cout << "Enter your height(feet(tab)inches(enter)): ";
+    cin >> feet >> inches;
+    cout << "Enter your weight in pounds: ";
+    cin >> weight;
+    inches += feet * feet_to_inches;
+    meters = inches * inches_to_meters;
+    weight /= pounds_to_kilos;
+    bmi = weight / (meters * meters);
+    cout << "Your BMI index is " << bmi << "." << endl;
+
+    const double sixty = 60.0;
+    double degree, minute, second;
+    cout << "Enter the latitude in degree(tab)minute(tab)second(enter): ";
+    cin >> degree >> minute >> second;
+    cout << degree << " degree " << minute << " minute " << second << " second = ";
+    minute /= sixty;
+    second = second / sixty / sixty;
+    cout << degree + minute + second << " degree." << endl;
+
+    long seconds;
+    const long DAY = 60*60*24;
+    const long HOUR = DAY/24;
+    const long MIN = HOUR/60;
+    cout << "Enter seconds to calculate: ";
+    cin >> seconds;
+    cout << seconds << " seconds: ";
+    long days = seconds / DAY;
+    seconds %= DAY;
+    long hours = seconds / HOUR;
+    seconds %= HOUR;
+    long minutes = seconds / MIN;
+    seconds %= MIN;
+    cout << days << " days, " << hours << " hours, ";
+    cout << minutes << " minutes, " << seconds << " seconds." << endl;
+
+    long long world, korea;
+    cout << "Enter the world population: ";
+    cin >> world;
+    cout << "Enter Korean population: ";
+    cin >> korea;
+    double percentage = double (korea) / double (world) * 100.0;
+    cout << "Koreans are " << percentage << " percent of world population." << endl;
+
+    double miles, gallons;
+    cout << "Enter how many miles you've drove: ";
+    cin >> miles;
+    cout << "Enter how many gallons your car spent: ";
+    cin >> gallons;
+    double hundred_kilometers = miles / 62.14;
+    double liters = gallons * 3.875;
+    cout << "Your car runs " << miles / gallons << " miles per gallon." << endl;
+    cout << "And it spends " << liters / hundred_kilometers << " liters per 100 kilometers." << endl;
+
+    return 0;
+}
